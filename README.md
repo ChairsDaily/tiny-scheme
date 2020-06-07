@@ -34,3 +34,22 @@ function fact (n)
 function main 
   fact ( 5 )
 ```
+When `main` is called, an entry storing its state (parameters and return address) is pushed
+onto the stack. `main` will remain here until the program terminates and control is returned back
+to our pseudocode runtime ;) each call to `fact` will push to the stack containing the 
+return address, or the address of the frame 'below' it and its parameters. this is so that
+when a call converges, it knows where to hand off program control to. 
+```
+fact(1) <- base case (recursion terminates here)
+fact(2)
+fact(3)
+fact(4)
+fact(5) <- initial push
+main( )
+```
+At base case, each call is popped off the stack **after** it terminates. This takes time. The result
+is accumulated down the stack until program control returns to `main` along with the result. In recursion,
+this stack portion of the programs memory grows very quickly, often times before the runtime has a chance
+to pop off calls, freeing the space. There are two popular solutions to stack overflow in deep recursions.
+- raise the stack limit by allocating it more of the programs memory
+- tail call recursion for linear cases
