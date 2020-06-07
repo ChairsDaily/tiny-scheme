@@ -5,6 +5,8 @@ I find inconvenient in most implementations.
 - cache aware parser
 - tail call optimizations for linear recursions
 - referenced based memory management
+- mostly R5RS compliant
+- entirely CS61A compliant
 <br>
 The tiny-scheme core was compiled down from Python 3.6 to C using Cython. It should
 be included by a gateway script that calls the evaluation routines in a REPL
