@@ -66,7 +66,7 @@ function fact (n, a)
 function main 
   fact ( 5 )
 ```
-<br>
+
 At base-case termination, `fact` orders a return of `a` and directs program control to the address of the call
 'below' it. because `a` is being returned as an accumulator instead of `n` itself, you do not have to wait
 to evaluate `n`. `a` is already pointing to the result in memory. The good news is, most functional programming languages
