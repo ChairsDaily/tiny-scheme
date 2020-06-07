@@ -23,5 +23,8 @@ build:
  clean:
   - rm -rf bin/
  
- test:
+ run:
   - ./bin/tinyscheme
+
+test:
+  - python3 -m unittest discover
