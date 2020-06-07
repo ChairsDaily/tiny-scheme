@@ -12,6 +12,19 @@ or over a file stream. Such a gateway is included. Alternatively, an object
 code version of the core is provided and can be called directly over a file. This allows
 tiny-scheme to outperform Python in most cases. 
 
+**compiling the tiny scheme core**
+```
+$ bash build-script.sh
+$ ./bin/core --file <your_tiny_scheme_code>
+```
+If youd rather run tiny scheme as a REPL, you won't get the same speed :(
+```
+$ python3 tiny/repl.py
+
+Copyleft (C) Kaleb Horvath, TinyScheme
+(eval)
+```
+
 ## memory management
 tiny scheme stays true to most LISP dialects and opts to maintain a hash map rather
 than a stack. this environment grows as new bindings are created for symbols. when
