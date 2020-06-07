@@ -58,3 +58,13 @@ Tail calls themself do not actually solve the problem of stack overflow, rather 
 the amount of time it takes for a recursive routine to return program control by accumulating the final
 result, whatever it may be, on the way up the stack which eliminates the waiting time before each routine
 is popped off and control returned. 
+<br>
+```
+function fact (n, a)
+  return a if n = 1
+  return fact ( n - 1, a * n )
+function main 
+  fact ( 5 )
+```
+
+
