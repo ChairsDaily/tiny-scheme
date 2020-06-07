@@ -9,6 +9,16 @@ I find inconvenient in most implementations.
 - entirely CS61A compliant
 - verbose standard library of complex procedures
 - bitwise optimizations for math
+
+```scheme
+(define combine (lambda (proc)
+  (lambda (x y)
+    (if (null? x) (quote ())
+      (proc (list (car x) (car y))
+        ((combine proc) (cdr x) (cdr y)))))))
+(define zip (combine cons))
+```
+
 <br>
 The tiny-scheme core was compiled down from Python 3.6 to C using Cython. It should
 be included by a gateway script that calls the evaluation routines in a REPL
