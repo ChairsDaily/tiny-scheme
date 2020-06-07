@@ -16,8 +16,10 @@ I find inconvenient in most implementations.
     (if (null? x) (quote ())
       (proc (list (car x) (car y))
         ((combine proc) (cdr x) (cdr y)))))))
+        
 (define zip (combine cons))
 ```
+*One of Peter Norvig's many Scheme test programs* 
 
 <br>
 The tiny-scheme core was compiled down from Python 3.6 to C using Cython. It should
