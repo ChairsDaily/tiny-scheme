@@ -58,17 +58,3 @@ Tail calls themself do not actually solve the problem of stack overflow, rather 
 the amount of time it takes for a recursive routine to return program control by accumulating the final
 result, whatever it may be, on the way up the stack which eliminates the waiting time before each routine
 is popped off and control returned. 
-<br>
-```
-function fact (n, a)
-  return a if n = 1
-  return fact ( n - 1, a * n )
-function main 
-  fact ( 5 )
-```
-<br>
-At base-case termination, `fact` orders a return of `a` and directs program control to the address of the call
-'below' it. because `a` is being returned as an accumulator instead of `n` itself, you do not have to wait
-to evaluate `n`. `a` is already pointing to the result in memory. The good news is, most functional programming languages
-that rely on recursion to reduce state and mutability (like tiny-scheme) optimize these faster tail call recursions into control flow jumps. What does this mean? Because there is no work left to be done after `return fact ( n - 1, a * n )` in that recursive call (e.g. `n * fact (...)`), the interpreter will not push a new call onto the stack. Instead, it re-binds `n` and `a` to their new values and jumps to the beginning of the same routine. The stack does not grow. This is handled
-using a while loop in tiny-scheme, and allows your recursive functions to recurse deeply without concern of overflow and without having to allocate more memory.  
