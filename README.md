@@ -35,7 +35,7 @@ $ ./bin/core --file <your_tiny_scheme_code>
 ```
 If youd rather run tiny scheme as a REPL, you won't get the same speed :(
 ```
-$ python3 tiny/repl.py
+$ python3 tiny
 
 Copyleft (C) Kaleb Horvath, TinyScheme
 (eval)
