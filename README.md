@@ -54,7 +54,7 @@ to pop off calls, freeing the space. There are two popular solutions to stack ov
 - raise the stack limit by allocating it more of the programs memory
 - tail call recursion for linear cases
 <br>
-tail calls themself do not actually solve the problem of stack overflow, rather they greatly reduce
+Tail calls themself do not actually solve the problem of stack overflow, rather they greatly reduce
 the amount of time it takes for a recursive routine to return program control by accumulating the final
 result, whatever it may be, on the way up the stack which eliminates the waiting time before each routine
 is popped off and control returned. 
