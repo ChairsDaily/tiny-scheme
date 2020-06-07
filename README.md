@@ -102,3 +102,9 @@ to evaluate `n`. `a` is already pointing to the result in memory. The good news 
 that rely on recursion to reduce state and mutability (like tiny-scheme) optimize these faster tail call recursions into control flow jumps. What does this mean? Because there is no work left to be done after `return fact ( n - 1, a * n )` in that recursive call (e.g. `n * fact (...)`), the interpreter will not push a new call onto the stack. Instead, it re-binds `n` and `a` to their new values and jumps to the beginning of the same routine. The stack does not grow. This is handled
 using a while loop in tiny-scheme, and allows your recursive functions to recurse deeply without concern of overflow and without having to allocate more memory.  
 
+## acknowledgements
+Thanks to Prof. Peter Norvig for his wonderful articles on building a LISP in Python 3. I would not have been able
+to implement tail call optimizations without [this article](http://norvig.com/lispy.html). Thanks to San Franciso
+University for providing me with dozens of R5RS compliance tests and UC Berkley for providing CS61A compliance
+tests generously. Finally, thanks to several GitHub users (noted specifically in LICENSE) for their Scheme standard
+library source code. These were also used to test my interpreter.
