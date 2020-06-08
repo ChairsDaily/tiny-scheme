@@ -1,3 +1,6 @@
+# python3.6 makefile, system specific
+# not for general use
+# @author chairs
 
 MAKEFLAGS += --silent
 SHARE=/usr/include/python3.6
