@@ -30,8 +30,8 @@ tiny-scheme to outperform Python in most cases.
 
 **compiling the tiny scheme core**
 ```
-$ bash build_script.sh
-$ ./bin/core --file <your_tiny_scheme_code>
+$ make build
+$ ./bin/tiny-scheme --file <your_tiny_scheme_code>
 ```
 If youd rather run tiny scheme as a REPL, you won't get the same speed :(
 ```
