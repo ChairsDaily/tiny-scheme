@@ -10,9 +10,11 @@ PY_PROG=tiny/core.py
 #CC=gcc
 #CFLAGS=-Os -I -L
 
-.PHONY: help build clean test
+.PHONY: help build clean test dev-build
 
 default: help
+dev:
+	chmod +x sync.sh 
 build:
 	cython $(PY_PROG) --embed
 	mkdir bin/
