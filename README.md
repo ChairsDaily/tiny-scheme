@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/ChairsDaily/tiny-scheme.svg?branch=master)](https://travis-ci.org/ChairsDaily/tiny-scheme)
 
 # tiny-scheme
 Fast and minimal interpreted runtime for a dialect of Scheme. Aims to eliminate things that
