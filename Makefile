@@ -1,5 +1,5 @@
 # python3.6 makefile, system specific
-# not for general use
+# not for general use DEPENDS HEAVILY ON CYTHON AND GCC
 # @author chairs
 
 MAKEFLAGS += --silent
