@@ -4,4 +4,4 @@ python:
 install: 
   pip install cython
 script: 
-  python3 -m unittest discover
+  make test
