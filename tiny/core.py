@@ -187,7 +187,13 @@ def __member (x, env):
 # primitive procedures
 ts_procs.update({'cons': __cons, 'car': __car, 'cdr': __cdr,
     'nil': [], 'list': __list, 'length': len,
-    'map': __map, '&': __objid})
+    'map': __map, '&': __objid, 
+
+    # exposing some system calls for our UNIX shell project
+    #'readline': __ts_readline,
+    #'fork': __ts_fork, 'waitpid': __ts_waitpid, 
+    #'exec': __ts_execvp, 'shlex': __ts_shlex,   
+    })
 
 
 def ts_cache (function):
