@@ -27,6 +27,13 @@ help:
 	@echo "   compile tiny scheme core"
 	@echo "clean"
 	@echo "   remove build files"
+	@echo "test"
+	@echo "   run unittests over tests/ folder"
+	@echo "---------------------------------------------------"
+	@echo "clean-build"
+	@echo "	  clean up build files (bin/, __pycache__/, etc.)"
+	@echo "clean-test"
+	@echo "   clean up unittest files and configs"
 
 .PHONY: clean-build clean-test
 clean-build:
