@@ -1,7 +1,6 @@
 language: python
 python:
 	- "3.6"
-
 # none right now
 install: make build
 script: make test
