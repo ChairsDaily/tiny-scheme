@@ -5,3 +5,4 @@ install:
   pip install cython
 script: 
   make test
+  make clean-test
