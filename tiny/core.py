@@ -64,7 +64,7 @@ ts_procs = {
     '/': op.truediv, '>': op.gt, '<': op.lt,
     '>=': op.ge, '<=': op.le, '=': op.eq,
     'not': op.not_, 'or': op.or_, 'mod': lambda a,b: a % b,
-    'and': op.and_, 'eq?': op.is_, 'abs': abs,
+    'and': op.and_, 'eq?': op.is_, 'abs': abs, 'sum': sum,
 
     # type predicates
     'list?': lambda a: isinstance(a, list),
@@ -187,7 +187,7 @@ def __member (x, env):
 # primitive procedures
 ts_procs.update({'cons': __cons, 'car': __car, 'cdr': __cdr,
     'nil': [], 'list': __list, 'length': len,
-    'map': __map, '&': __objid, 
+    'map': __map, '&': __objid, 'filter': lambda c,l: list(filter(c, l)),
 
     # exposing some system calls for our UNIX shell project
     #'readline': __ts_readline,
